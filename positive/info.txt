@@ -1,57 +1,66 @@
-rawdata/couch1.bmp 1 678 294 36 45
-rawdata/flashtest1.bmp 1 393 231 25 38
-rawdata/flashtest10.bmp 1 988 399 52 58
-rawdata/flashtest11.bmp 1 968 327 72 124
-rawdata/flashtest12.bmp 1 975 409 70 16
-rawdata/flashtest13.bmp 1 1059 416 81 74
-rawdata/flashtest2.bmp 1 640 377 60 63
-rawdata/flashtest3.bmp 1 1000 352 38 106
-rawdata/flashtest4.bmp 1 525 230 63 79
-rawdata/flashtest5.bmp 1 906 315 30 35
-rawdata/flashtest6.bmp 1 744 317 42 79
+rawdata/couch1.bmp 1 620 262 83 70
+rawdata/couch2.bmp 1 575 241 121 96
+rawdata/couch3.bmp 1 616 138 172 221
+rawdata/fire0.bmp 1 249 46 243 246
+rawdata/fire1.bmp 1 220 288 60 75
+rawdata/fire2.bmp 1 140 292 140 100
+rawdata/fire3.bmp 5 455 306 96 188 451 395 94 103 547 211 70 85 635 412 57 64 617 318 69 100
+rawdata/fire4.bmp 3 375 256 325 233 918 396 137 153 850 175 80 74
+rawdata/fire5.bmp 2 191 172 201 166 321 281 58 185
+rawdata/fire6.bmp 1 32 172 30 68
+rawdata/flashtest1.bmp 1 378 215 49 62
+rawdata/flashtest10.bmp 1 979 390 66 78
+rawdata/flashtest11.bmp 1 968 334 71 126
+rawdata/flashtest12.bmp 1 957 333 74 118
+rawdata/flashtest13.bmp 1 995 296 172 202
+rawdata/flashtest2.bmp 1 635 357 66 102
+rawdata/flashtest3.bmp 2 969 238 76 191 895 228 67 237
+rawdata/flashtest4.bmp 1 493 157 132 161
+rawdata/flashtest5.bmp 1 899 309 46 41
+rawdata/flashtest6.bmp 2 731 307 53 87 767 304 39 46
 rawdata/flashtest7.bmp 1
-rawdata/flashtest8.bmp 1 609 279 51 62
-rawdata/flashtest9.bmp 3 911 400 36 42 910 353 51 64 972 374 46 56
-rawdata/interior_fire1.bmp 1 392 338 58 47
-rawdata/interior_fire10.bmp 3 186 265 60 60 378 210 23 24 350 39 64 60
-rawdata/interior_fire11.bmp 1 827 409 30 12
-rawdata/interior_fire12.bmp 1 624 75 62 129
-rawdata/interior_fire13.bmp 2 769 286 53 51 750 225 88 104
-rawdata/interior_fire14.bmp 1 470 218 295 81
-rawdata/interior_fire15.bmp 5 367 194 67 55 469 223 112 79 183 183 168 96 294 83 135 120 396 125 100 99
-rawdata/interior_fire16.bmp 3 191 159 72 24 211 168 16 14 211 168 16 14
-rawdata/interior_fire17.bmp 1 146 240 32 39
-rawdata/interior_fire18.bmp 2 133 183 19 22 38 182 8 19
-rawdata/interior_fire19.bmp 1 135 243 27 27
-rawdata/interior_fire2.bmp 1 88 89 50 74
-rawdata/interior_fire20.bmp 1 224 147 38 41
-rawdata/interior_fire21.bmp 1 239 166 13 16
-rawdata/interior_fire22.bmp 1 560 242 18 55
-rawdata/interior_fire23.bmp 1 744 241 12 53
-rawdata/interior_fire24.bmp 1 636 309 21 18
-rawdata/interior_fire25.bmp 1 600 175 25 24
-rawdata/interior_fire26.bmp 2 314 369 22 86 429 443 41 34
-rawdata/interior_fire27.bmp 1 632 371 28 36
-rawdata/interior_fire28.bmp 1 554 299 18 28
-rawdata/interior_fire29.bmp 1 546 221 32 28
-rawdata/interior_fire3.bmp 1 100 117 13 29
-rawdata/interior_fire30.bmp 1 494 343 31 53
-rawdata/interior_fire31.bmp 1 641 280 32 78
-rawdata/kitchen1.bmp 1 502 309 84 70
-rawdata/kitchen2.bmp 1 505 308 111 91
-rawdata/kitchen3.bmp 1 613 416 125 49
-rawdata/kitchen4.bmp 1 555 357 82 58
-rawdata/kitchen5.bmp 1 716 453 50 53
-rawdata/livingroom1.bmp 1 665 329 33 38
-rawdata/livingroom2.bmp 1 567 320 41 51
-rawdata/livingroom3.bmp 1 703 455 61 67
-rawdata/livingroom4.bmp 1 732 269 35 88
-rawdata/livingroom5.bmp 1 184 388 105 59
-rawdata/livingroom6.bmp 1 146 500 104 98
-rawdata/livingroom7.bmp 1 811 385 35 53
-rawdata/trailer2.bmp 1 463 479 16 20
-rawdata/trailer3.bmp 1 328 591 8 14
-rawdata/trailer4.bmp 1 301 488 12 26
-rawdata/trailer5.bmp 1 274 365 54 72
-rawdata/warehouse1.bmp 1 391 467 9 17
-rawdata/warehouse2.bmp 1 412 367 26 30
+rawdata/flashtest8.bmp 1 565 196 136 162
+rawdata/flashtest9.bmp 1 891 318 134 158
+rawdata/interior_fire1.bmp 1 351 291 142 135
+rawdata/interior_fire10.bmp 3 126 106 131 237 261 148 152 138 307 11 127 137
+rawdata/interior_fire11.bmp 1 799 390 84 41
+rawdata/interior_fire12.bmp 4 219 36 664 248 587 32 116 234 377 110 162 112
+rawdata/interior_fire13.bmp 2 755 29 81 307
+rawdata/interior_fire14.bmp 1 401 162 377 141
+rawdata/interior_fire15.bmp 2 499 32 282 393 219 46 330 251
+rawdata/interior_fire16.bmp 2 235 145 36 48 204 162 25 26
+rawdata/interior_fire17.bmp 1
+rawdata/interior_fire18.bmp 1 25 28 152 176
+rawdata/interior_fire19.bmp 1 126 172 65 98
+rawdata/interior_fire2.bmp 1 57 67 95 111
+rawdata/interior_fire20.bmp 1 204 88 74 100
+rawdata/interior_fire21.bmp 1 204 128 59 60
+rawdata/interior_fire22.bmp 1 542 175 50 128
+rawdata/interior_fire23.bmp 1 701 161 95 137
+rawdata/interior_fire24.bmp 2 621 253 44 77 583 289 31 43
+rawdata/interior_fire25.bmp 1 587 157 66 41
+rawdata/interior_fire26.bmp 2 394 421 86 59 306 312 49 148
+rawdata/interior_fire27.bmp 1 630 368 41 40
+rawdata/interior_fire28.bmp 1 541 258 48 74
+rawdata/interior_fire29.bmp 1 535 172 44 78
+rawdata/interior_fire3.bmp 1 83 51 54 116
+rawdata/interior_fire30.bmp 1 471 264 72 138
+rawdata/interior_fire31.bmp 1 616 218 93 159
+rawdata/kitchen1.bmp 1 459 173 155 217
+rawdata/kitchen2.bmp 1 449 183 201 223
+rawdata/kitchen3.bmp 1 563 354 192 118
+rawdata/kitchen4.bmp 1 471 248 186 186
+rawdata/kitchen5.bmp 1 611 362 185 185
+rawdata/livingroom1.bmp 1 657 319 46 59
+rawdata/livingroom2.bmp 1 551 290 78 93
+rawdata/livingroom3.bmp 1 666 371 122 172
+rawdata/livingroom4.bmp 1 703 188 80 194
+rawdata/livingroom5.bmp 1 61 181 254 285
+rawdata/livingroom6.bmp 1 12 185 295 427
+rawdata/livingroom7.bmp 1 779 300 127 160
+rawdata/trailer2.bmp 1 454 448 45 78
+rawdata/trailer3.bmp 2 384 538 44 75 297 504 76 121
+rawdata/trailer4.bmp 1 259 438 111 150
+rawdata/trailer5.bmp 1 215 288 182 221
+rawdata/warehouse1.bmp 3 377 434 35 74 407 430 35 64 383 431 51 72
+rawdata/warehouse2.bmp 3 421 466 49 39 375 340 92 78 377 335 93 169
