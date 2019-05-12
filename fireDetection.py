@@ -3,6 +3,7 @@ import cv2
 import time
 import tkinter as tk
 from tkinter import filedialog
+from tkinter import messagebox
 import sys
 import threading
 
@@ -19,8 +20,12 @@ noFireDetectedCount = 0
 
 #select video file:
 video_filename =  filedialog.askopenfilename(title = "Select video file",filetypes = (("Video files","*.mp4;*.mov;*.avi"),("All files","*.*")))
-video_stream = cv2.VideoCapture(video_filename)
+#exit if no file selected:
+if not video_filename:
+    messagebox.showinfo("ERROR", "No file was selected")
+    exit("\nERROR: No file was selected! Exiting...")
 
+video_stream = cv2.VideoCapture(video_filename)
 
 def analyzeDetectionRate():
     global last_analysis_time, fire_frames_detected, old_frames_detected_value, high_confidence, moderate_confidence, low_confidence, noFireDetectedCount
@@ -56,14 +61,15 @@ def main():
     while 1:
         if pause_video == False:
             ret, img = video_stream.read()
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            current_frame = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             global fire_frames_detected
             analyzeDetectionRate()
 
             # last two parameters are detection weights:
             # first paramater is threshold for positive detection: lower means more likely to detect
             # second parameter is threshold for negative detection: higher number reduces false alarms
-            fire = fire_cascade.detectMultiScale(gray, 1.3, 13)
+            # detectMultiScale(image[, scaleFactor[, minNeighbors[, flags[, minSize[, maxSize]]]]]) 
+            fire = fire_cascade.detectMultiScale(current_frame, 1.3, 13)
                 
             for (x,y,w,h) in fire:
                 #Create a rectangle around the detected area:
@@ -89,9 +95,6 @@ def playVideo():
 def pauseVideo():
     global pause_video
     pause_video = True
-
-def selectVideo():
-    sys.exit()
 
 def quitProgram():
     sys.exit()
