@@ -9,8 +9,8 @@ import threading
 
 global video_stream
 pause_video = True
-fire_frames_detected = 0
-old_frames_detected_value = 0
+current_num_fire_frames = 0
+old_num_fire_frames = 0
 high_confidence = False
 moderate_confidence = False
 low_confidence = False
@@ -28,19 +28,24 @@ if not video_filename:
 video_stream = cv2.VideoCapture(video_filename)
 
 def analyzeDetectionRate():
-    global last_analysis_time, fire_frames_detected, old_frames_detected_value, high_confidence, moderate_confidence, low_confidence, noFireDetectedCount
+    global last_analysis_time, current_num_fire_frames, old_num_fire_frames, high_confidence, moderate_confidence, low_confidence, noFireDetectedCount
 
     #Analyze detection counts every 2 seconds:
-    if ((time.time() - last_analysis_time) > 2.0):
-        if fire_frames_detected - old_frames_detected_value > 24:
+    if ((time.time() - last_analysis_time) > 1.0):
+        fire_frames_since_last_analysis = current_num_fire_frames - old_num_fire_frames
+
+        if fire_frames_since_last_analysis > 12:
+            #set high confidence flag:
             high_confidence = True
             moderate_confidence = False
             low_confidence = False
-        elif fire_frames_detected - old_frames_detected_value > 12:
+        elif fire_frames_since_last_analysis > 6:
+            #set moderate confidence flag:
             high_confidence = False
             moderate_confidence = True
             low_confidence = False
-        elif fire_frames_detected - old_frames_detected_value > 1:
+        elif fire_frames_since_last_analysis > 1:
+            #set low confidence flag:
             high_confidence = False
             moderate_confidence = False
             low_confidence = True
@@ -52,7 +57,9 @@ def analyzeDetectionRate():
                 moderate_confidence = False
                 low_confidence = False
                 noFireDetectedCount = 0
-        old_frames_detected_value = fire_frames_detected
+        #store the current number of fire frames as the old number for later reference:
+        old_num_fire_frames = current_num_fire_frames
+        # record analysis time:
         last_analysis_time = time.time()
 
 
@@ -62,7 +69,7 @@ def main():
         if pause_video == False:
             ret, img = video_stream.read()
             current_frame = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            global fire_frames_detected
+            global current_num_fire_frames
             analyzeDetectionRate()
 
             # last two parameters are detection weights:
@@ -74,7 +81,7 @@ def main():
             for (x,y,w,h) in fire:
                 #Create a rectangle around the detected area:
                 cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                fire_frames_detected += 1
+                current_num_fire_frames += 1
 
             if high_confidence:
                 cv2.putText(img, "HIGH CONFIDENCE FIRE", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (76, 255, 255), 2, lineType=cv2.LINE_AA)
