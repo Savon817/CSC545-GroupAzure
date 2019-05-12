@@ -82,10 +82,14 @@ def quitProgram():
 def tkThread():
     r = tk.Tk()
     r.title('Fire Detection')
-    button = tk.Button(r, text='Exit', width=50, height=10, command=quitProgram) 
-    button2 = tk.Button(r, text='Start', width=50, height=10, command=t1.start) 
-    button.pack()
-    button2.pack()
+    exitButton = tk.Button(r, text='Exit', width=15, height=1, command=quitProgram) 
+    playButton = tk.Button(r, text='Play', width=15, height=1, command=playVideo) 
+    pauseButton = tk.Button(r, text='Pause', width=15, height=1, command=pauseVideo) 
+    selectVideoButton = tk.Button(r, text='Select Video', width=15, height=1, command=selectVideo) 
+    selectVideoButton.pack()
+    playButton.pack()
+    pauseButton.pack()
+    exitButton.pack()
     r.mainloop()
 
 t1 = threading.Thread(target=main)
