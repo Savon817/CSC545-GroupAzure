@@ -36,17 +36,18 @@ def analyzeDetectionRate():
     #Analyze detection counts every 2 seconds:
     if ((time.time() - last_analysis_time) > 0.5):
         fire_frames_since_last_analysis = current_num_fire_frames - old_num_fire_frames
-        if fire_frames_since_last_analysis > 5:
+        if fire_frames_since_last_analysis > 4:
             #set high confidence flag:
             high_confidence = True
             moderate_confidence = False
             low_confidence = False
-        elif fire_frames_since_last_analysis > 3:
+        # Check for moderate confidence only if high confidence isn't already set
+        elif fire_frames_since_last_analysis > 2 and high_confidence == False:
             #set moderate confidence flag:
             high_confidence = False
             moderate_confidence = True
-            low_confidence = False
-        elif fire_frames_since_last_analysis > 1:
+        # Check for low confidence only if high confidence or moderate confidence isn't already set
+        elif fire_frames_since_last_analysis > 0 and high_confidence == False and moderate_confidence == False:
             #set low confidence flag:
             high_confidence = False
             moderate_confidence = False
@@ -54,7 +55,7 @@ def analyzeDetectionRate():
         else:
             #If no fire frames are detected after several repetitions, clear the warning:
             noFireDetectedCount += 1
-            if noFireDetectedCount > 4:
+            if noFireDetectedCount > 8:
                 high_confidence = False
                 moderate_confidence = False
                 low_confidence = False
