@@ -3,7 +3,7 @@
 - Run create_list.bat in the negative folder
 - Run objectmarker.exe in the positive folder
 - Select positive objects with mouse, press spacebar to save
-- one save per image!
+- can select multiple sections per image
 - Press enter to move to next image
 - run samples_creation.bat to produce vector file
 - Delete any existing folders in cascade folder if they exist
