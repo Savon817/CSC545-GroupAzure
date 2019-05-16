@@ -18,7 +18,7 @@ fire_cascade = cv2.CascadeClassifier('myhaar.xml')
 last_analysis_time = time.time()
 fire_frames_since_last_analysis = 0
 noFireDetectedCount = 0
-neighbors = 7
+neighbors = 24
 
 #select video file:
 video_filename =  filedialog.askopenfilename(title = "Select video file",filetypes = (("Video files","*.mp4;*.mov;*.avi"),("All files","*.*")))
@@ -36,17 +36,17 @@ def analyzeDetectionRate():
     #Analyze detection counts every 2 seconds:
     if ((time.time() - last_analysis_time) > 0.5):
         fire_frames_since_last_analysis = current_num_fire_frames - old_num_fire_frames
-        if fire_frames_since_last_analysis > 4:
+        if fire_frames_since_last_analysis > 5:
             #set high confidence flag:
             high_confidence = True
             moderate_confidence = False
             low_confidence = False
-        elif fire_frames_since_last_analysis > 1:
+        elif fire_frames_since_last_analysis > 3:
             #set moderate confidence flag:
             high_confidence = False
             moderate_confidence = True
             low_confidence = False
-        elif fire_frames_since_last_analysis > 0:
+        elif fire_frames_since_last_analysis > 1:
             #set low confidence flag:
             high_confidence = False
             moderate_confidence = False
@@ -54,7 +54,7 @@ def analyzeDetectionRate():
         else:
             #If no fire frames are detected after several repetitions, clear the warning:
             noFireDetectedCount += 1
-            if noFireDetectedCount > 2:
+            if noFireDetectedCount > 4:
                 high_confidence = False
                 moderate_confidence = False
                 low_confidence = False
@@ -80,7 +80,7 @@ def main():
                     for the CPU. 
                 third parameter specifies how many neighbors each candidate rectangle should have to retain it."""
             
-            fire = fire_cascade.detectMultiScale(current_frame, 1.2, neighbors)
+            fire = fire_cascade.detectMultiScale(current_frame, 1.1, neighbors)
                 
             for (x,y,w,h) in fire:
                 #Create a rectangle around the detected area:
@@ -89,7 +89,7 @@ def main():
 
             
             frames_per_second = str(2 * fire_frames_since_last_analysis)
-            cv2.putText(img, frames_per_second + " flame detections/sec", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (76, 255, 255), 1, lineType=cv2.LINE_AA)
+            cv2.putText(img, frames_per_second + " flame detections/sec", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 0), 1, lineType=cv2.LINE_AA)
 
             if high_confidence:
                 cv2.putText(img, "HIGH CONFIDENCE FIRE", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (76, 255, 255), 1, lineType=cv2.LINE_AA)
