@@ -1,5 +1,6 @@
 bedroom1.JPG
 couch1.JPG
+download.jpg
 f.JPG
 flashtest1.JPG
 flashtest2.JPG
@@ -7,6 +8,8 @@ flashtest3.JPG
 flashtest4.JPG
 kitchen1.JPG
 kitchen2.JPG
+kitchenlight.jpg
+kitchenlight2.jpg
 livingroom1.JPG
 livingroom2.JPG
 neg-0001.jpg
@@ -109,6 +112,7 @@ neg-0115.jpg
 neg-0116.jpg
 neg-0118.jpg
 neg-0119.jpg
+negative1.jpg
 office1.JPG
 office2.JPG
 office3.JPG
@@ -214,3 +218,11 @@ UMD_099.jpg
 UMD_100.jpg
 warehouse1.JPG
 warehouse2.JPG
+window1.jpg
+window2.jpg
+window3.jpg
+window4.jpg
+window5.jpg
+window6.jpg
+window7.jpg
+window8.jpg

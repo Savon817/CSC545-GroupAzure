@@ -18,7 +18,7 @@ fire_cascade = cv2.CascadeClassifier('myhaar.xml')
 last_analysis_time = time.time()
 fire_frames_since_last_analysis = 0
 noFireDetectedCount = 0
-neighbors = 21
+neighbors = 7
 
 #select video file:
 video_filename =  filedialog.askopenfilename(title = "Select video file",filetypes = (("Video files","*.mp4;*.mov;*.avi"),("All files","*.*")))
