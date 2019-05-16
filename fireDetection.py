@@ -18,7 +18,7 @@ fire_cascade = cv2.CascadeClassifier('myhaar.xml')
 last_analysis_time = time.time()
 fire_frames_since_last_analysis = 0
 noFireDetectedCount = 0
-neighbors = 21
+neighbors = 7
 
 #select video file:
 video_filename =  filedialog.askopenfilename(title = "Select video file",filetypes = (("Video files","*.mp4;*.mov;*.avi"),("All files","*.*")))
@@ -80,7 +80,7 @@ def main():
                     for the CPU. 
                 third parameter specifies how many neighbors each candidate rectangle should have to retain it."""
             
-            fire = fire_cascade.detectMultiScale(current_frame, 1.2, neighbors)
+            fire = fire_cascade.detectMultiScale(current_frame, 1.05, neighbors)
                 
             for (x,y,w,h) in fire:
                 #Create a rectangle around the detected area:
