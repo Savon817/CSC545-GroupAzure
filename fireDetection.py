@@ -81,7 +81,7 @@ def main():
                     for the CPU. 
                 third parameter specifies how many neighbors each candidate rectangle should have to retain it."""
             
-            fire = fire_cascade.detectMultiScale(current_frame, 1.1, neighbors)
+            fire = fire_cascade.detectMultiScale(current_frame, 1.05, neighbors)
                 
             for (x,y,w,h) in fire:
                 #Create a rectangle around the detected area:
